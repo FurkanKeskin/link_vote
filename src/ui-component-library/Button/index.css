@@ -1,0 +1,18 @@
+ 
+  .app-button:focus {
+    outline: none;
+  }
+  
+  .app-button:hover {
+    background-color: #aaaaaa;
+  }
+  
+  .app-button:active {
+    background-color: #585858;
+  }
+  
+  .app-button.disable {
+    cursor: not-allowed;
+    background-color: #aaaaaa;
+  }
+  
