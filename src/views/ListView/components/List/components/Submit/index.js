@@ -33,7 +33,21 @@ const Submit = (props) => {
                 <span css={css`position: absolute; left: 50%; transform: translate(-50%, -58%); color: #000; font-size: 8rem; font-weight: 750; top: 50%;`}>+</span>
             </div>
             <div css={css`margin-left: 15px; overflow: hidden;`}>
-                <h4 css={css`margin-bottom: 0; margin-left:2rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 3.2rem; line-height: 100px; font-weight:6500; max-width:25rem; `}>{SUBMIT_A_LINK}</h4>
+                <h4 css={css`
+                margin-bottom: 0;
+                margin-left:2rem;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: 3.2rem;
+                line-height: 100px;
+                font-weight:6500;
+                max-width:25rem;
+
+                @media only screen and (max-width: 420px) {
+                    margin-left: 0rem;
+                    font-size: 1.4rem;
+                    }`}>{SUBMIT_A_LINK}</h4>
             </div>
         </li>
     );

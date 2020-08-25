@@ -15,25 +15,47 @@ const VoteBar = (props) => {
     };
 
     return (
- 
-        <div css={css`margin-left: 15px; overflow: hidden;`}>
-        <h4 css={css`margin-bottom: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 2rem; font-weight:640`}>
-            {props.link.name || props.name}
-        </h4>
-        <a href={props.link.url} onClick={e => e.stopPropagation()} css={css`color: #898686 ; font-size:1.3rem; `}>({props.link.url})</a>
-        {(
-        <div css={css`cursor: pointer; display: flex; margin-top:10%;`}>
-            <div onClick={upVoteHandler}>
-                <Arrow width="25" height="25" fill="#aaaaaa" rotateDeg="90" />
-        <div css={css`display: inline; color: #aaaaaa; font-size: 14px; font-weight: 600; user-select: none;`}>{UP_VOTE}</div>
-            </div>
-            <div css={css`padding-left: 10rem;`} onClick={downVoteHandler}>
-                <Arrow width="25" height="25" fill="#aaaaaa" rotateDeg="-90" />
-                <div css={css`display: inline; color: #aaaaaa; font-size: 14px; font-weight: 600; user-select: none;`}>{DOWN_VOTE}</div>
-            </div>
+
+        <div css={css`margin-left: 15px;
+                        overflow: hidden;
+                        @media only screen and (max-width: 420px) {
+                            margin-left: 15px;
+                            font-size: 1.2rem;
+                            max-width: 12rem;
+                            }`}>
+            <h4 css={css`margin-bottom: 0;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    font-size: 2rem;
+                    font-weight:640;
+                    @media only screen and (max-width: 420px) {
+                        font-size: 1.2rem;
+                    }`}>
+                {props.link.name || props.name}
+            </h4>
+            <a href={props.link.url} onClick={e => e.stopPropagation()}
+                css={css`color: #898686;
+                     font-size:1.3rem; 
+                     @media only screen and (max-width: 420px) {
+                    font-size: 1.rem;}`}>({props.link.url})
+           </a>
+            {(
+                <div css={css`cursor: pointer; display: flex; margin-top:10%;`}>
+                    <div onClick={upVoteHandler}>
+                        <Arrow width="25" height="25" fill="#aaaaaa" rotateDeg="90" />
+                        <div css={css`display: inline; color: #aaaaaa; font-size: 14px; font-weight: 600; user-select: none;`}>{UP_VOTE}</div>
+                    </div>
+                    <div css={css`padding-left: 10rem;
+            @media only screen and (max-width: 420px){
+                padding-left: 0rem;
+            }`} onClick={downVoteHandler}>
+                        <Arrow width="25" height="25" fill="#aaaaaa" rotateDeg="-90" />
+                        <div css={css`display: inline; color: #aaaaaa; font-size: 14px; font-weight: 600; user-select: none;`}>{DOWN_VOTE}</div>
+                    </div>
+                </div>
+            )}
         </div>
-        )}
-    </div>
 
     );
 };

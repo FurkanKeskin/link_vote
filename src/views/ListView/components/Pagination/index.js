@@ -20,7 +20,6 @@ const Pagination = (props) => {
 
     const fillPagesArray = () => {
         const totalPageCount = getTotalPageCount();
-        console.log("bu sefer olsun" + totalPageCount);
         const calculatedPages = [];
         for (let pageIndex = 1; pageIndex <= totalPageCount; pageIndex++) {
             calculatedPages.push(pageIndex);
