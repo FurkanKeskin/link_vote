@@ -12,8 +12,8 @@ const Square = (props) => {
             position: relative;
             line-height: 100px;
         `}>
-            <span css={css`position: absolute; left: 50%; transform: translate(-50%, -58%); color: #000; font-size: 3rem; font-weight: 700; top: 50%;`}>{props.text}</span>
-            <span css={css`position: absolute; left: 50%; transform: translate(-50%, -58%); font-size: 16px; top: 85%; font-weight: 600; text-transform: uppercase; `}>{props.subtext}</span>
+            <span css={css`position: absolute; left: 48%; transform: translate(-50%, -58%); color: #000; font-size: 3.2rem; font-weight: 750; top: 44%;`}>{props.text}</span>
+            <span css={css`position: absolute; left: 50%; transform: translate(-50%, -58%); font-size: 16px; top: 73%; font-weight: 620; text-transform: uppercase; `}>{props.subtext}</span>
         </div>
     );
 };

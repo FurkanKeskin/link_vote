@@ -12,8 +12,15 @@ const Filter = (props) => {
     const sortHandler = e => props.sortSelection(e.target.value);
     
     return (
-        <select css={css`background-color: #D8D8D8`} value={order} onChange={sortHandler}>
-            <option value={SORT_ORDER.DESC}>{MOST_VOTED}</option>
+        <select css={
+        css`background-color: #D8D8D8; 
+        min-width: 19rem;
+        min-height: 2.5rem;
+        background-color: #ececec;
+        border: 0.5px solid #aaaaaa;
+        border-radius: 5px;
+        position: relative;`} value={order} onChange={sortHandler}>
+            <option css={css`line-height:2rem;`} value={SORT_ORDER.DESC}>{MOST_VOTED}</option>
             <option value={SORT_ORDER.ASC}>{LEAST_VOTED}</option>
         </select>
     );

@@ -12,7 +12,9 @@ const LinkDeleteIcon = (props) => {
 
     return (
         <div
-            css={css`position: absolute; right: -15px; top: -15px; `} onClick={deleteHandler} title="Delete">
+            css={css`position: absolute; right: -15px; top: -15px; `} 
+            onClick={deleteHandler} 
+            title="Delete">
             <DeleteIcon />
         </div>
     );
